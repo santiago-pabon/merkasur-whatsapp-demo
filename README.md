@@ -1,4 +1,4 @@
-# MerkaSur Amarilo Express
+# Catálogo digital y pedidos por WhatsApp
 
 Frontend estático para explorar productos, armar un carrito y enviar por WhatsApp el pedido con los datos de entrega. No procesa pagos ni confirma existencias; la tienda responde por WhatsApp con disponibilidad, total final y medios de pago.
 
