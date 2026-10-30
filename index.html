@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#174d36" />
+    <meta name="description" content="Haz tu mercado en MerkaSur Amarilo Express y confirma tu pedido por WhatsApp." />
+    <title>MerkaSur Amarilo Express — tu mercado de confianza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/admin/admin.css" />
+  </head>
+  <body>
+    <div class="announcement"><span class="announcement-dot"></span> Tu mercado, fresco y sin salir de casa <span class="announcement-divider">·</span> Atención por WhatsApp</div>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="MerkaSur Amarilo Express, inicio">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 20h32l-3.2 21H11.2L8 20Z" fill="currentColor"/><path d="M16 20c0-7 3.8-12 8-12s8 5 8 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M18 27v8m6-8v8m6-8v8" stroke="#F8F7F0" stroke-width="2.3" stroke-linecap="round"/></svg></span>
+        <span class="brand-name brand-long">MerkaSur <span>Amarilo Express</span><small>EL MERCADO DE TU BARRIO</small></span>
+      </a>
+      <div class="header-message"><span class="delivery-icon">⌖</span><span><b>¿A dónde llevamos tu mercado?</b><small>La dirección la pones al finalizar</small></span></div>
+      <button class="cart-trigger" id="openCart" aria-label="Abrir carrito"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 4h2l2.2 10.1a2 2 0 0 0 2 1.6h7.9a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1.3" fill="currentColor"/><circle cx="17" cy="20" r="1.3" fill="currentColor"/></svg><span>Mi carrito</span><b class="cart-count" id="cartCount">0</b></button>
+    </header>
+
+    <main id="storeView">
+      <section class="hero" id="inicio">
+        <div class="hero-copy"><div class="eyebrow"><span>✳</span> BUENO, FRESCO Y CERCA</div><h1>Todo lo que te gusta.<br /><em>Directo a tu puerta.</em></h1><p>Arma tu mercado con calma. Nosotros confirmamos disponibilidad y valor final por WhatsApp.</p><a class="hero-cta" href="#productos">Explorar productos <span>↓</span></a><div class="hero-note"><span class="avatars"><i>🥑</i><i>🍊</i><i>🥬</i></span><span><b>Tu mercado de confianza</b><small>Fresco todos los días</small></span></div></div>
+        <div class="hero-art" aria-label="Ilustración de mercado fresco"><div class="art-sun"></div><div class="art-leaf leaf-one">✦</div><div class="art-leaf leaf-two">✦</div><div class="produce produce-apple">🍎</div><div class="produce produce-avocado">🥑</div><div class="produce produce-banana">🍌</div><div class="produce produce-carrot">🥕</div><div class="produce produce-grapes">🍇</div><div class="produce produce-leaf">🥬</div><div class="basket"><div class="basket-handle"></div><div class="basket-body"><span>MS</span></div></div><div class="art-sparkle">✳</div><div class="art-caption"><span class="caption-dot"></span> FRESQUITO PARA TI</div></div>
+      </section>
+
+      <section class="shop-section" id="productos">
+        <div class="section-heading"><div><div class="eyebrow eyebrow-dark">EL MERCADO COMPLETO</div><h2>¿Qué se te antoja?</h2><p>Encuentra tus favoritos y agrégalos al carrito.</p></div><div class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="searchInput" type="search" placeholder="Busca un producto..." aria-label="Buscar productos" /><kbd>⌘ K</kbd></div></div>
+        <nav class="category-list" id="categoryList" aria-label="Categorías de productos"></nav>
+        <div class="product-heading"><h3 id="categoryTitle">Los más pedidos</h3><span id="productCount"></span></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="empty-results hidden" id="emptyResults"><span>🧺</span><h3>No encontramos ese producto</h3><p>Prueba con otra búsqueda o categoría.</p></div>
+      </section>
+      <section class="service-strip"><div><span class="service-icon">🌿</span><b>Frescura todos los días</b><small>Elegimos lo mejor para ti</small></div><div><span class="service-icon">💬</span><b>Pedido fácil por WhatsApp</b><small>Confirmamos cada detalle contigo</small></div><div><span class="service-icon">🏡</span><b>Hasta la puerta de tu casa</b><small>Cuéntanos dónde estás</small></div></section>
+    </main>
+
+    <main class="admin-view hidden" id="adminView">
+      <div class="admin-top"><button class="back-button" id="leaveAdmin">← Volver a la tienda</button><span class="admin-status"><i></i> Panel de administración</span></div>
+      <section class="admin-intro"><div class="eyebrow eyebrow-dark">HERRAMIENTAS DE TU NEGOCIO</div><h1>Administra tu <em>tienda.</em></h1><p>Edita el catálogo y la información que ven tus clientes.</p></section>
+      <section class="admin-card">
+        <div class="admin-section-title"><div><h2>Marca y pedidos</h2><p>Nombre, logo, WhatsApp y el texto de confirmación.</p></div><button class="button-primary" id="saveSettings">Guardar cambios</button></div>
+        <div class="admin-fields">
+          <label class="field">Nombre del supermercado<input id="settingName" placeholder="Nombre de tu tienda" /></label>
+          <label class="field">WhatsApp de pedidos<input id="settingPhone" placeholder="573001234567" /></label>
+          <label class="field admin-wide">Logo · URL de imagen<input id="settingLogo" placeholder="https://.../logo.png" /></label>
+          <label class="field admin-wide">Mensaje inicial de WhatsApp<textarea id="settingGreeting" rows="2" placeholder="¡Hola! Quiero hacer este pedido..."></textarea></label>
+          <label class="field admin-wide">Mensaje final de WhatsApp<textarea id="settingClosing" rows="2" placeholder="Confirmen disponibilidad y total, por favor."></textarea></label>
+        </div>
+        <div class="admin-visual-controls">
+          <label class="field">Frase pequeña de marca<input id="settingTagline" placeholder="EL MERCADO DE TU BARRIO" /></label>
+          <label class="field">Tipografía<select id="settingFont"><option value="brand">DM Sans + Manrope</option><option value="nunito">Nunito</option><option value="system">Sistema</option></select></label>
+          <label class="field admin-wide">Título principal · separa las dos líneas con |<input id="settingHeroTitle" placeholder="Todo lo que te gusta.|Directo a tu puerta." /></label>
+          <label class="field admin-wide">Texto de portada<textarea id="settingHeroSubtitle" rows="2"></textarea></label>
+          <label class="field color-field">Color principal<input id="settingPrimary" type="color" /></label>
+          <label class="field color-field">Color de acento<input id="settingAccent" type="color" /></label>
+          <label class="field color-field">Fondo de portada<input id="settingBackground" type="color" /></label>
+          <label class="field color-field">Color del texto<input id="settingText" type="color" /></label>
+        </div>
+      </section>
+      <section class="admin-card">
+        <div class="admin-section-title"><div><h2>Agregar productos</h2><p>Incluye una imagen pública con enlace directo, precio y categoría.</p></div></div>
+        <form id="productForm" class="admin-fields">
+          <input type="hidden" id="editingProductId" />
+          <label class="field">Nombre del producto<input id="productName" required placeholder="Ej. Alimento para gato" /></label>
+          <label class="field" id="productPriceField">Precio en pesos<input id="productPrice" required type="number" min="0" step="100" placeholder="12500" /></label>
+          <label class="field">Categoría<select id="productCategory"></select></label>
+          <label class="field">Forma de venta<select id="productMeasure"><option value="unit">Por unidad</option><option value="pack">Por paquete</option><option value="lb">Por libra</option><option value="variants">Varias presentaciones y precios</option></select></label>
+          <label class="field">Detalle corto<input id="productDetail" placeholder="Presentación o descripción" /></label>
+          <label class="field">Emoji de muestra<input id="productEmoji" maxlength="6" placeholder="🐶" /></label>
+          <label class="field admin-wide">Imagen del producto · URL<input id="productImage" type="url" placeholder="https://.../producto.jpg" /></label>
+          <div class="variant-editor admin-wide hidden" id="variantEditor">
+            <p class="variant-editor-title">Presentaciones y precios</p>
+            <div class="variant-fields">
+              <label class="field">Opción 1 · nombre<input id="variantLabel1" placeholder="Unidad" /></label>
+              <label class="field">Opción 1 · precio<input id="variantPrice1" type="number" min="0" step="100" placeholder="700" /></label>
+              <label class="field">Opción 2 · nombre<input id="variantLabel2" placeholder="Medio paquete" /></label>
+              <label class="field">Opción 2 · precio<input id="variantPrice2" type="number" min="0" step="100" placeholder="5000" /></label>
+              <label class="field">Opción 3 · nombre<input id="variantLabel3" placeholder="Paquete" /></label>
+              <label class="field">Opción 3 · precio<input id="variantPrice3" type="number" min="0" step="100" placeholder="9000" /></label>
+            </div>
+          </div>
+          <div class="admin-form-actions admin-wide"><button class="button-primary" id="submitProduct" type="submit">Agregar al catálogo</button><button class="button-quiet hidden" id="cancelEdit" type="button">Cancelar edición</button></div>
+        </form>
+      </section>
+      <section class="admin-card">
+        <div class="admin-section-title"><div><h2>Catálogo</h2><p id="adminProductCount"></p></div></div>
+        <div class="admin-product-list" id="adminProductList"></div>
+      </section>
+      <section class="admin-card category-admin">
+        <div class="admin-section-title"><div><h2>Categorías</h2><p>Agrega nuevas secciones, como Mascotas.</p></div></div>
+        <form id="categoryForm" class="category-form"><input id="newCategoryName" required placeholder="Nombre de la categoría" /><input id="newCategoryIcon" maxlength="6" placeholder="🐾" aria-label="Emoji de la categoría" /><button type="submit" class="button-dark">Agregar categoría</button></form>
+        <div class="admin-category-list" id="adminCategoryList"></div>
+      </section>
+      <section class="admin-card">
+        <div class="admin-section-title"><div><h2>Contraseña de administración</h2><p>Cambia la clave que protege este panel en este navegador.</p></div></div>
+        <form id="passwordForm" class="admin-fields password-fields">
+          <label class="field">Contraseña actual<input id="currentAdminPassword" type="password" autocomplete="current-password" required /></label>
+          <label class="field">Nueva contraseña<input id="newAdminPassword" type="password" autocomplete="new-password" minlength="8" required /></label>
+          <label class="field">Repite la nueva contraseña<input id="confirmAdminPassword" type="password" autocomplete="new-password" minlength="8" required /></label>
+          <div class="admin-form-actions"><button class="button-primary" type="submit">Cambiar contraseña</button></div>
+        </form>
+      </section>
+      <section class="admin-card backup-card">
+        <div><h2>Respaldo de tienda</h2><p>Exporta un archivo para guardar o mover esta configuración a otro navegador.</p></div>
+        <div class="admin-form-actions"><button class="button-quiet" id="exportStore">Exportar configuración</button><label class="button-quiet import-label">Importar configuración<input type="file" id="importStore" accept="application/json" /></label></div>
+      </section>
+      <p class="admin-local-note">El catálogo y la contraseña hasheada se guardan solo en este navegador. Para compartir los cambios y proteger el panel en una tienda publicada, conecta el sitio a un servidor con autenticación y base de datos.</p>
+    </main>
+
+    <div class="login-backdrop hidden" id="adminLogin" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+      <form class="login-card" id="adminLoginForm">
+        <button type="button" class="login-close" id="closeAdminLogin" aria-label="Cerrar">×</button>
+        <span class="login-mark">MS</span><div class="eyebrow eyebrow-dark">ACCESO DE ADMINISTRADOR</div>
+        <h2 id="loginTitle">Tu tienda, bajo tu control.</h2><p>Ingresa la contraseña para abrir el panel.</p>
+        <label class="field">Contraseña<input id="adminPassword" type="password" autocomplete="current-password" required /></label>
+        <button class="button-primary full-width" type="submit">Entrar al panel <span>→</span></button>
+        <small id="loginError" class="login-error" aria-live="polite"></small>
+      </form>
+    </div>
+
+    <div class="overlay hidden" id="overlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Tu carrito" aria-hidden="true">
+      <div class="drawer-header"><div><span class="eyebrow eyebrow-dark">TU SELECCIÓN</span><h2>Mi carrito <span id="drawerItemCount">(0)</span></h2></div><button class="icon-button" id="closeCart" aria-label="Cerrar carrito">×</button></div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-empty hidden" id="cartEmpty"><span>🧺</span><h3>Tu canasta está vacía</h3><p>Agrega productos y aquí los tendrás.</p><button class="button-dark" id="emptyContinue">Ver productos</button></div>
+      <div class="drawer-footer" id="drawerFooter"><div class="delivery-suggestion" id="deliverySuggestion"></div><div class="subtotal-row"><span>Subtotal estimado</span><b id="cartSubtotal">$0</b></div><div class="subtotal-row delivery-row"><span id="deliveryLabel">Domicilio</span><b id="deliveryFee">$0</b></div><div class="subtotal-row total-row"><span>Total estimado</span><b id="cartTotal">$0</b></div><p class="estimate-note"><span>✳</span> El total puede cambiar según disponibilidad. La tienda lo confirma por WhatsApp.</p><button class="button-primary full-width" id="goCheckout">Continuar con mi pedido <span>→</span></button><small class="secure-note">Sin pagos en línea · Solo confirmamos tu pedido</small></div>
+    </aside>
+
+    <section class="checkout-view hidden" id="checkoutView" aria-label="Finalizar pedido">
+      <div class="checkout-top"><button class="back-button" id="backToStore"><span>←</span> Seguir comprando</button><a class="brand" href="#inicio"><span class="brand-mark"><svg viewBox="0 0 48 48" fill="none"><path d="M8 20h32l-3.2 21H11.2L8 20Z" fill="currentColor"/><path d="M16 20c0-7 3.8-12 8-12s8 5 8 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M18 27v8m6-8v8m6-8v8" stroke="#F8F7F0" stroke-width="2.3" stroke-linecap="round"/></svg></span><span class="brand-name brand-long">MerkaSur <span>Amarilo Express</span><small>EL MERCADO DE TU BARRIO</small></span></a><span class="checkout-step">PEDIDO <b>01</b> / 01</span></div>
+      <div class="checkout-layout"><div class="checkout-main"><div class="checkout-intro"><div class="eyebrow eyebrow-dark">UN ÚLTIMO PASO</div><h1>¿A dónde llevamos<br/>tu <em>mercado?</em></h1><p>Revisa tus productos y déjanos tus datos. Te atenderemos por WhatsApp.</p></div><div class="checkout-card"><div class="checkout-card-title"><span class="step-number">1</span><div><h2>Tu dirección de entrega</h2><p>Así sabremos dónde encontrarte.</p></div></div><form id="addressForm"><div class="field-grid"><label class="field field-wide">Nombre completo<input name="name" autocomplete="name" placeholder="¿Cómo te llamas?" required /></label><label class="field">Celular<input name="phone" autocomplete="tel" type="tel" placeholder="300 000 0000" required /></label><label class="field">Barrio<input name="neighborhood" autocomplete="address-level3" placeholder="Tu barrio" required /></label><label class="field field-wide">Dirección<input name="address" autocomplete="street-address" placeholder="Calle, carrera y número" required /></label><label class="field">Conjunto / edificio<input name="building" placeholder="Nombre del conjunto" /></label><label class="field">Torre / apto<input name="unit" placeholder="Torre 2, apto 301" /></label><label class="field field-wide">Indicaciones adicionales <span class="optional">OPCIONAL</span><textarea name="notes" rows="3" placeholder="Portería, punto de referencia, instrucciones..."></textarea></label></div></form></div><div class="whatsapp-info"><span>✳</span><p><b>Tu pedido no se cobra todavía.</b> La tienda revisará existencias, te confirmará el total y coordinará el pago contigo por WhatsApp.</p></div></div>
+        <aside class="order-summary"><div class="summary-heading"><div><div class="eyebrow eyebrow-dark">RESUMEN</div><h2>Tu pedido <span id="checkoutCount">(0)</span></h2></div><button id="editCart" class="text-button">Editar</button></div><div class="summary-items" id="summaryItems"></div><div class="delivery-suggestion checkout-suggestion" id="checkoutSuggestion"></div><div class="summary-totals"><div><span>Subtotal estimado</span><b id="checkoutSubtotal">$0</b></div><div><span id="checkoutDeliveryLabel">Domicilio</span><b id="checkoutDeliveryFee">$0</b></div><div class="grand-total"><span>Total estimado</span><b id="checkoutTotal">$0</b></div><small>El valor final se confirma por WhatsApp según disponibilidad.</small></div><button class="button-primary full-width whatsapp-button" id="sendOrder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.5-4.9a8.4 8.4 0 1 1 16-3.9Z"/><path d="M8.4 8.1c.2-.5.4-.5.7-.5h.4c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4 0 .5l-.5.7c-.2.2-.2.4 0 .7.6.9 1.3 1.5 2.2 1.9.2.1.4.1.6-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2 1.1-.7 1.5-.5.4-1.1.6-1.7.5-.7-.1-1.6-.4-2.7-1-1.5-.8-2.5-2.2-2.7-2.5-.3-.4-.7-1.1-.7-1.9 0-.8.4-1.3.7-1.6Z"/></svg>Enviar pedido por WhatsApp <span>↗</span></button><p class="summary-footnote">Al continuar, se abrirá WhatsApp con tu pedido listo para enviar.</p></aside></div>
+    </section>
+    <footer class="site-footer"><a class="brand brand-footer" href="#inicio"><span class="brand-mark"><svg viewBox="0 0 48 48" fill="none"><path d="M8 20h32l-3.2 21H11.2L8 20Z" fill="currentColor"/><path d="M16 20c0-7 3.8-12 8-12s8 5 8 12" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/><path d="M18 27v8m6-8v8m6-8v8" stroke="#F8F7F0" stroke-width="2.3" stroke-linecap="round"/></svg></span><span class="brand-name brand-long">MerkaSur <span>Amarilo Express</span><small>EL MERCADO DE TU BARRIO</small></span></a><span>Fresco, fácil y cerca de ti <b>✳</b></span><button id="manageStore" class="footer-admin">Administrar tienda</button><span id="footerCopyright">© <span id="year"></span> MerkaSur Amarilo Express</span></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="assets/products/categories.js"></script>
+    <script src="assets/products/products.js"></script>
+    <script src="assets/core/state.js"></script>
+    <script src="assets/core/helpers.js"></script>
+    <script src="assets/admin/auth.js"></script>
+    <script src="assets/storefront/settings.js"></script>
+    <script src="assets/storefront/catalog.js"></script>
+    <script src="assets/checkout/checkout.js"></script>
+    <script src="assets/cart/cart.js"></script>
+    <script src="assets/admin/admin.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

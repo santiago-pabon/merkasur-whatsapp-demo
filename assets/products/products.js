@@ -1,0 +1,20 @@
+const defaultProducts = [
+  { id: 'banano', name: 'Banano criollo', detail: 'Selección fresca', price: 1900, measure: 'lb', category: 'Frutas', emoji: '🍌', color: '#fbf2ce', tag: 'FRESCO HOY' },
+  { id: 'aguacate', name: 'Aguacate Hass', detail: 'Maduro en su punto', price: 3300, measure: 'lb', category: 'Frutas', emoji: '🥑', color: '#e9f0d7', tag: 'FAVORITO' },
+  { id: 'tomate', name: 'Tomate chonto', detail: 'De la huerta', price: 2100, measure: 'lb', category: 'Verduras', emoji: '🍅', color: '#fae7dc', tag: 'DE TEMPORADA' },
+  { id: 'leche', name: 'Leche entera', detail: 'Bolsa · 1 litro', price: 3900, measure: 'pack', category: 'Lácteos', emoji: '🥛', color: '#e5eff1', tag: '' },
+  { id: 'huevos', name: 'Huevos AA', detail: 'Elige cómo comprarlos', price: 700, variants: [{ key: 'huevos-unidad', label: 'Unidad', measure: 'unidad', price: 700 }, { key: 'huevos-media', label: 'Media cubeta · 15 huevos', measure: 'media cubeta (15 huevos)', price: 7500 }, { key: 'huevos-cubeta', label: 'Cubeta · 30 huevos', measure: 'cubeta (30 huevos)', price: 14000 }], category: 'Lácteos', emoji: '🥚', color: '#f5ecdd', tag: 'DE GRANJA' },
+  { id: 'arroz', name: 'Arroz premium', detail: 'Grano seleccionado', price: 2400, measure: 'lb', category: 'Granos', emoji: '🍚', color: '#eeeae0', tag: '' },
+  { id: 'pollo', name: 'Pechuga de pollo', detail: 'Precio por libra · Fresca', price: 6900, measure: 'lb', category: 'Carnes', emoji: '🍗', color: '#f7e6d8', tag: 'FRESCO HOY' },
+  { id: 'zanahoria', name: 'Zanahoria', detail: 'Lavada', price: 1200, measure: 'lb', category: 'Verduras', emoji: '🥕', color: '#faebd9', tag: '' },
+  { id: 'jabon', name: 'Jabón de baño', detail: 'Barra · 125 g', price: 3800, category: 'Aseo personal', emoji: '🧼', color: '#e9eef1', tag: '' },
+  { id: 'shampoo', name: 'Shampoo familiar', detail: 'Botella · 400 ml', price: 16800, category: 'Aseo personal', emoji: '🧴', color: '#e9e6f2', tag: '' },
+  { id: 'detergente', name: 'Detergente en polvo', detail: 'Bolsa · 1 kg', price: 9900, measure: 'pack', category: 'Aseo del hogar', emoji: '🫧', color: '#e4eef0', tag: '' },
+  { id: 'aceite', name: 'Aceite vegetal', detail: 'Botella · 900 ml', price: 8900, measure: 'pack', category: 'Despensa', emoji: '🫒', color: '#edf0dc', tag: '' },
+  { id: 'naranja', name: 'Naranja Valencia', detail: 'Jugosa', price: 2300, measure: 'lb', category: 'Frutas', emoji: '🍊', color: '#f8ead4', tag: '' },
+  { id: 'cebolla', name: 'Cebolla cabezona', detail: 'Blanca', price: 1800, measure: 'lb', category: 'Verduras', emoji: '🧅', color: '#f2e9df', tag: '' },
+  { id: 'frijol', name: 'Fríjol cargamanto', detail: 'Grano seleccionado', price: 3600, measure: 'lb', category: 'Granos', emoji: '🫘', color: '#eee2dd', tag: '' },
+  { id: 'carne', name: 'Carne para sudar', detail: 'Res · Precio por libra', price: 8900, measure: 'lb', category: 'Carnes', emoji: '🥩', color: '#f3e0de', tag: 'FRESCO HOY' },
+  { id: 'mentas', name: 'Mentas de hierbabuena', detail: 'Paquete · 12 pastillas', price: 1200, measure: 'pack', category: 'Despensa', emoji: '🍬', color: '#e3f0e5', tag: 'PARA EL CAMINO' },
+];
+
