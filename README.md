@@ -35,7 +35,7 @@ assets/
 
 ## Configuración
 
-- El WhatsApp de la tienda está configurado como **5731280619981**.
+- El WhatsApp de la tienda está configurado como **57312806199981**.
 - El domicilio es gratis desde $10.000; por debajo se agregan $2.000.
 - Los productos de muestra se editan en **assets/products/products.js**; las categorías, en **assets/products/categories.js**.
 - El estilo del panel está en **assets/admin/admin.css** y su comportamiento en **assets/admin/admin.js**.
